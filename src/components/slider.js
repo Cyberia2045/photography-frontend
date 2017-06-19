@@ -19,7 +19,7 @@ class Slider extends Component {
 
   render() {
 
-    var imageStyling = {
+    var slideStyling = {
       backgroundImage: "url(" + this.state.photos[this.state.slideCount].url + ")",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
@@ -27,7 +27,7 @@ class Slider extends Component {
     }
 
     return (
-        <div style={imageStyling}>
+        <div style={slideStyling}>
 
           <RightArrow nextSlide={this.nextSlide} />
           <LeftArrow previousSlide={this.previousSlide} />
@@ -37,7 +37,12 @@ class Slider extends Component {
   }
 
   nextSlide() {
-    this.setState({ slideCount: this.state.slideCount + 1 })
+    if (this.state.slideCount === this.state.photos.length -1) {
+        this.setState({ slideCount: 0})
+    }
+    else {
+      this.setState({ slideCount: this.state.slideCount +1 })
+    }
   }
 
   previousSlide() {
