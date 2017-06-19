@@ -46,7 +46,12 @@ class Slider extends Component {
   }
 
   previousSlide() {
-    this.setState({ slideCount: this.state.slideCount - 1 })
+    if (this.state.slideCount === 0) {
+      this.setState({ slideCount: this.state.photos.length - 1})
+    }
+    else {
+      this.setState({ slideCount: this.state.slideCount - 1 })
+    }
   }
 
 }
