@@ -10,20 +10,22 @@ class Carousel extends Component {
 			carouselTitle: props.carouselTitle,
 			carouselButtonTitle: props.carouselButtonTitle
 		}
+		this.carouselStyle = {
+			position: "relative"
+		}
 	}
 
 		render() {
 
 			return(
-				<div>
-					<h2>{this.state.carouselTitle}</h2>
-					<div><Slider photos={this.state.carouselSlider} /></div>
-					<p>{this.state.carouselButtonTitle}</p>
+				<div style={this.carouselStyle}>
+					<div className="carousel-title">{this.state.carouselTitle}</div>
+					<Slider photos={this.state.carouselSlider} />
+					<div className="carousel-button">{this.state.carouselButtonTitle}</div>
 				</div>
 				)
 
 		}
-
 }
 
 export default Carousel;

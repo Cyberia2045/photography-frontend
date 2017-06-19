@@ -8,7 +8,7 @@ class Slider extends Component {
     super(props);
 
     this.state = {
-      slideCount: 1,
+      slideCount: 0,
       photos: props.photos
     }
 
@@ -27,11 +27,10 @@ class Slider extends Component {
     }
 
     return (
-        <div style={imageStyling} className="slider">
+        <div style={imageStyling}>
 
-        <RightArrow nextSlide={this.nextSlide} />
-
-          <div><LeftArrow previousSlide={this.previousSlide} /></div>
+          <RightArrow nextSlide={this.nextSlide} />
+          <LeftArrow previousSlide={this.previousSlide} />
           
         </div>
     );

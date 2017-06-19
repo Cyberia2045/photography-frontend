@@ -9,12 +9,6 @@ class App extends Component {
     this.state = {
 
     }
-    this.GalleryContainer = {
-      width: "100vw",
-      height: "100vh",
-      backgroundColor: "rgb(240, 240, 240)",
-      marginTop: "-20px"
-    }
 
     this.travelPhotos = [
       {
@@ -45,12 +39,17 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div style={this.GalleryContainer}>
-          <Carousel carouselSlider= {this.travelPhotos}carouselTitle="Travel Photography" carouselButtonTitle="Explore the Gallery" /> 
-        </div>        <div style={this.GalleryContainer}>
-          <Carousel carouselSlider= {this.travelPhotos}carouselTitle="Travel Photography" carouselButtonTitle="Explore the Gallery" /> 
-        </div>
+        
+          <Carousel carouselSlider= {this.travelPhotos} carouselTitle="Travel Photography" carouselButtonTitle="Explore" />   
+        
+          <Carousel carouselSlider= {this.travelPhotos} carouselTitle="Travel Photography" carouselButtonTitle="Explore" /> 
+
+          <Carousel carouselSlider= {this.travelPhotos} carouselTitle="Travel Photography" carouselButtonTitle="Explore" /> 
+
+          <Carousel carouselSlider= {this.travelPhotos} carouselTitle="Travel Photography" carouselButtonTitle="Explore" /> 
+
       </div>
+
     );
   }
 }
