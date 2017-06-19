@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Slider from './slider.js'
+import Slider from './slider';
 
 class Carousel extends Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			gallery: props.gallery,
+			carouselSlider: props.carouselSlider,
 			carouselTitle: props.carouselTitle,
 			carouselButtonTitle: props.carouselButtonTitle
 		}
@@ -14,11 +14,10 @@ class Carousel extends Component {
 
 		render() {
 
-			console.log(this.state.gallery)
 			return(
 				<div>
 					<h2>{this.state.carouselTitle}</h2>
-					<div>{this.state.gallery}</div>
+					<div><Slider photos={this.state.carouselSlider} /></div>
 					<p>{this.state.carouselButtonTitle}</p>
 				</div>
 				)

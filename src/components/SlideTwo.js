@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-const SlideTwo= (props) => {
+class SlideTwo extends Component {
+
+	render() {
 
   let background = {
     backgroundImage: 'url(http://finedininglovers.cdn.crosscast-system.com/BlogPost/xl_11047_faroe-finedininglovers-TP.jpg)',
@@ -8,7 +10,13 @@ const SlideTwo= (props) => {
     backgroundPosition: 'center'
   }
 
-  return <div style={background} className="slide"></div>
+  return (
+	  	<div>	
+	  		<div className="slide" style={background}></div>
+	  	</div>	
+  	)
+
+	}
 }
 
 export default SlideTwo;

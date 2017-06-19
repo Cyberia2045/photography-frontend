@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-const SlideOne= (props) => {
+class SlideOne extends Component {
+
+	render() {
 
   let background = {
     backgroundImage: 'url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/12/06/10/bhutan.jpg)',
@@ -8,7 +10,13 @@ const SlideOne= (props) => {
     backgroundPosition: 'center'
   }
 
-  return <div style={background} className="slide"></div>
+  return (
+  	<div>
+  		<div className="slide" style={background}></div>
+  	</div>
+  	)
+
+	}
 }
 
 export default SlideOne;

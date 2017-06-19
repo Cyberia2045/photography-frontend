@@ -1,0 +1,61 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%; }
+
+.slider {
+  height: 100vh;
+  width: 100%;
+  background: #ddd;
+  position: absolute;
+  background-size: "cover";
+  background-repeat: "no-repeat"; }
+  .slider h1, .slider h2, .slider h3, .slider h4, .slider h5, .slider h6 {
+    margin: 0; }
+  .slider .slide {
+    height: 100%;
+    width: 100%; }
+  .slider .dotsContainer {
+    position: absolute;
+    bottom: 7%;
+    width: 100%;
+    text-align: center;
+    z-index: 99999; }
+    .slider .dotsContainer .dot {
+      background: #222;
+      padding: 0px 8px;
+      margin-right: 5px;
+      cursor: pointer;
+      border-radius: 120px; }
+    .slider .dotsContainer .isCurrent {
+      background: #fff; }
+  .slider .nextArrow {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    cursor: pointer;
+    transition: all ease-in .2s;
+    color: #fff;
+    width: 50px;
+    height: 30px;
+    background-color: red; }
+    .slider .nextArrow:hover {
+      opacity: 0.5;
+      transform: scale(1.4);
+      transition: all ease-in .2s; }
+  .slider .backArrow {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    cursor: pointer;
+    color: #fff;
+    width: 50px;
+    height: 30px;
+    background-color: red;
+    transition: all ease-in .2s; }
+    .slider .backArrow:hover {
+      opacity: 0.5;
+      transform: scale(1.4);
+      transition: all ease-in .2s; }
+
+/*# sourceMappingURL=styles.css.map */
