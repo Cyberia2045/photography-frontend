@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Slider from './slider';
-import Gallery from './gallery';
 
 class Carousel extends Component {
 
