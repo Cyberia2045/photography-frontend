@@ -2,7 +2,7 @@ html, body {
   margin: 0;
   height: 100%;
   width: 100%;
-  background-color: #f0f0f0; }
+  background-color: #e6e6e6; }
 
 .gallery {
   width: 70vw;
@@ -19,15 +19,43 @@ html, body {
   max-width: 300px;
   height: 70vw;
   max-height: 300px;
+  border: 3px solid black;
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 20px; }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .gallery {
     width: 80vw;
-    max-width: 960px;
+    max-width: 500px;
     margin: 0 auto; }
+
+  .gallery__image {
+    width: 35vw;
+    height: 30vw;
+    margin: 10px; } }
+@media (min-width: 768px) {
+  .gallery {
+    width: 100vw;
+    max-width: 660px;
+    margin-top: 50px; }
+
+  .gallery__image {
+    width: 25vw;
+    margin: 10px; } }
+@media (min-width: 860px) {
+  .gallery {
+    width: 100vw;
+    max-width: 860px;
+    margin-top: 50px; }
+
+  .gallery__image {
+    width: 25vw;
+    margin: 10px; } }
+@media (min-width: 1025px) {
+  .gallery {
+    width: 100%;
+    max-width: 980px; }
 
   .gallery__image {
     width: 25vw;
@@ -80,14 +108,20 @@ html, body {
 .carousel-title {
   position: absolute;
   z-index: 10;
-  width: 30%;
+  width: 50%;
   top: 10%;
-  left: 35%;
+  left: 25%;
   text-align: center;
-  font-size: 30px;
+  font-size: 1.5em;
   font-family: "Futura";
-  color: white;
+  color: #e6e6e6;
   border-radius: 10px;
-  background-color: rgba(169, 169, 169, 0.2); }
+  background-color: rgba(120, 120, 120, 0.7); }
+
+@media (min-width: 768px) {
+  .carousel-title {
+    width: 40%;
+    left: 30%;
+    font-size: 2em; } }
 
 /*# sourceMappingURL=styles.css.map */

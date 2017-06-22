@@ -15,20 +15,66 @@
 		max-width: 300px;
 		height: 70vw;
 		max-height: 300px;
+		border: 3px solid black;
 		border-radius: 10px;
 		margin: 0 auto;
 		margin-top: 20px;
 	}
 
-	@media (min-width: 768px) {
+	// Smartphone (Landscape View)
+	@media (min-width: 640px) {
 		.gallery {
 			width: 80vw;
-			max-width: 960px;
+			max-width: 500px;
 			margin: 0 auto;
+		}
+
+		.gallery__image {
+			width: 35vw;
+			height: 30vw;
+			margin: 10px;
+		}
+	}
+
+	// Tablet
+	@media (min-width: 768px) {
+		.gallery {
+			width: 100vw;
+			max-width: 660px;
+			margin-top: 50px;
 		}
 
 		.gallery__image {
 			width: 25vw;
 			margin: 10px;
 		}
-	} 
+	}
+
+	// Tablet (Landscape View)
+	@media (min-width: 860px) {
+		.gallery {
+			width: 100vw;
+			max-width: 860px;
+			margin-top: 50px;
+		}
+
+		.gallery__image {
+			width: 25vw;
+			margin: 10px;
+		}
+	}  
+
+	// Desktop
+	@media (min-width: 1025px) {
+		.gallery {
+			width: 100%;
+			max-width: 980px;
+		}
+
+		.gallery__image {
+			width: 25vw;
+			margin: 10px;
+		}
+	}
+
+

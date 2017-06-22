@@ -5,47 +5,60 @@ import '../css/styles.css';
 
 class App extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-
-    }
-
-    this.travelPhotos = [
-      {
-        name: "Cliff Temple",
-        location: "Bhutan",
-        url: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/12/06/10/bhutan.jpg"
-      },
-      {
-        name: "Waterfalls at the Edge of the World",
-        location: "Faroe Islands",
-        url: "http://finedininglovers.cdn.crosscast-system.com/BlogPost/xl_11047_faroe-finedininglovers-TP.jpg"
-      },        
-      {
-        name: "Climbing North England",
-        location: "Peaks District, UK",
-        url: "https://s-media-cache-ak0.pinimg.com/originals/4e/63/c2/4e63c27e7dc82ff9861612fbb33b920b.jpg"
-      },        
-      {
-        name: "Friends of the Western Ghats",
-        location: "South India",
-        url: "http://www.daijiworld.com/images1/sush_240810_fall1.jpg"
-      }
-    ]
-
-    this.gallery = {
-      
-      "Finland in the Fall": ["http://nordictravel.com.au/image/type:galleryFullImage/id:4643/filename:c.+Jiang+Ping+Visit+Finland+72464_000_04.jpg", "http://cdni.condenast.co.uk/1920x1280/a_c/aerial-view-of-Helsinki-finland-conde-nast-traveller-18march16-visit-helsinki-Jussi-Hellsten.jpg", "http://static1.bestie.vn/Mlog/ImageContent/201606/2thumba-20160622111110.jpg"],
-      
-      "holiday": ["http://images.redfunnel.co.uk/images/ferry-travel/red-osprey-picture-gallery/red_osprey_leaves_cowes_roads.jpg", "https://www.e-oprawa.pl/media/PL/img/galeria/580x360/661.jpg", "https://metrouk2.files.wordpress.com/2015/07/ad_175752041.jpg"],
-      
-      "beach": []
-    }
-
-    this.loadGallery = this.loadGallery.bind(this)
+constructor() {
+  super();
+  this.state = {
 
   }
+
+  this.explorerCarousel = [
+    
+    {
+      url: "https://farm3.staticflickr.com/2916/33308008471_b86068af0f_h.jpg"
+    },
+
+    {
+      url: "https://farm3.staticflickr.com/2813/32622133573_cb63740701_h.jpg"
+    },  
+
+    {
+      url: "https://farm4.staticflickr.com/3798/33326809421_600e90e109_h.jpg"
+    },        
+
+  ]
+
+  this.gallery = {
+    
+    "Exploring the World Through Light and Glass": [
+
+    // Kansas Farm House
+    "https://farm1.staticflickr.com/603/32622170683_43a329fdb0_h.jpg",
+
+    // Utah
+    "https://farm4.staticflickr.com/3754/32593897024_096c77a8e6_h.jpg",
+
+    // West Kansas
+    "https://farm4.staticflickr.com/3869/33404262086_331e34fe33_h.jpg",
+
+    //Lambertville High School
+    "https://farm1.staticflickr.com/596/33395830686_42e36bb25c_h.jpg",
+
+    //Abandonned in a Hayfield
+    "https://farm3.staticflickr.com/2950/32611838324_c64a17be8c_h.jpg",
+
+    //Eastern State Penitentiary
+    "https://farm4.staticflickr.com/3679/32639670253_0fdee7ebf2_h.jpg"
+
+    ],
+    
+    "holiday": ["http://images.redfunnel.co.uk/images/ferry-travel/red-osprey-picture-gallery/red_osprey_leaves_cowes_roads.jpg", "https://www.e-oprawa.pl/media/PL/img/galeria/580x360/661.jpg", "https://metrouk2.files.wordpress.com/2015/07/ad_175752041.jpg"],
+    
+    "beach": []
+  }
+
+  this.loadGallery = this.loadGallery.bind(this)
+
+}
 
   render() {
 
@@ -58,13 +71,13 @@ class App extends Component {
     return (
       <div className="App">
         
-          <Carousel carouselSlider= {this.travelPhotos} carouselTitle="Travel Photography" carouselButtonTitle="Explore" />   
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Photography By Michael Nagy" carouselButtonTitle="Explore" />   
         
-          <Carousel carouselSlider= {this.travelPhotos} carouselTitle="Travel Photography" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="Finland in the Fall" /> 
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Exploring the World Through Light and Glass" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="Exploring the World Through Light and Glass" /> 
 
-          <Carousel carouselSlider= {this.travelPhotos} carouselTitle="Travel Photography" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="holiday" /> 
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Travel Photography" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="holiday" /> 
 
-          <Carousel carouselSlider= {this.travelPhotos} carouselTitle="Travel Photography" carouselButtonTitle="Explore" /> 
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Travel Photography" carouselButtonTitle="Explore" /> 
 
       </div>
 
