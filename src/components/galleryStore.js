@@ -19,6 +19,8 @@ class GalleryStore extends Component {
 					<div className="image-size-panel__item">18x24</div>
 				</div>
 				<img className="galleryStore__image" src={this.state.photo.url} alt={this.state.photo.alt} />
+				<h2 className="galleryStore__title">{this.state.photo.name}</h2>
+				<p className="galleryStore__description">{this.state.photo.description}</p>
 			</div>
 			)
 	}

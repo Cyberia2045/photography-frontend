@@ -5,17 +5,24 @@
 }
 
 	.galleryStore__title {
-		width: 100%;
-		margin-left: 40px;
+		text-align: center;
 		font-family: cursive;
 		font-size: 1.3em;
+		color: rgb(80,30,30);
 	}
 
 	.galleryStore__image {
 		width: 100%;
 		height: 60vw;
 		margin: 0 auto;
+		margin-top: 10px;
 		border-radius: 10px;
+	}
+
+	.galleryStore__description {
+		text-align: center;
+		font-family: "Futura";
+		color: rgb(30,30,30);
 	}
 
 .image-size-panel	{

@@ -113,16 +113,22 @@ html, body {
   margin: 0 auto; }
 
 .galleryStore__title {
-  width: 100%;
-  margin-left: 40px;
+  text-align: center;
   font-family: cursive;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  color: #501e1e; }
 
 .galleryStore__image {
   width: 100%;
   height: 60vw;
   margin: 0 auto;
+  margin-top: 10px;
   border-radius: 10px; }
+
+.galleryStore__description {
+  text-align: center;
+  font-family: "Futura";
+  color: #1e1e1e; }
 
 .image-size-panel {
   width: 100%;
