@@ -28,23 +28,47 @@ class App extends Component {
       
       "Exploring the World Through Light and Glass": [
 
-      // Kansas Farm House
-      "https://farm1.staticflickr.com/603/32622170683_43a329fdb0_h.jpg",
+    {
+      name: "Abandonned in a Sea of Grass",
+      url: "https://farm1.staticflickr.com/603/32622170683_43a329fdb0_h.jpg",
+      alt: "Abandonned Kansas Farm House",
+      description: ""
+    },
 
-      // Utah
-      "https://farm4.staticflickr.com/3754/32593897024_096c77a8e6_h.jpg",
+    {
+      name: "Trekking through a Terrestrial Martian Landscape",
+      url: "https://farm4.staticflickr.com/3754/32593897024_096c77a8e6_h.jpg",
+      alt: "Arches National Park",
+      description: ""
+    },
 
-      // West Kansas
-      "https://farm4.staticflickr.com/3869/33404262086_331e34fe33_h.jpg",
+    {
+      name: "On the Rails at the Edge of Prarie Country",
+      url: "https://farm4.staticflickr.com/3869/33404262086_331e34fe33_h.jpg",
+      alt: "Grain Elevator Beside Railroad Tracks in West Kansas",
+      description: ""
+    },
 
-      //Lambertville High School
-      "https://farm1.staticflickr.com/596/33395830686_42e36bb25c_h.jpg",
+    {
+      name: "Detritus in a West Jersey Classroom",
+      url: "https://farm1.staticflickr.com/596/33395830686_42e36bb25c_h.jpg",
+      alt: "Abandonned Classroom inside Lambertville High School",
+      description: ""
+    },
 
-      //Abandonned in a Hayfield
-      "https://farm3.staticflickr.com/2950/32611838324_c64a17be8c_h.jpg",
+    {
+      name: "Forgotten in the Western Plains",
+      url: "https://farm3.staticflickr.com/2950/32611838324_c64a17be8c_h.jpg",
+      alt: "Abandonned house in a West Kansas Hayfield",
+      description: ""
+    },
 
-      //Eastern State Penitentiary
-      "https://farm4.staticflickr.com/3679/32639670253_0fdee7ebf2_h.jpg"
+    {
+      name: "The Dark March Down Death Row",
+      url: "https://farm4.staticflickr.com/3679/32639670253_0fdee7ebf2_h.jpg",
+      alt: "The hallways of Eastern State Penitentiary",
+      description: ""
+    }
 
       ],
       

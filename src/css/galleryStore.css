@@ -1,0 +1,33 @@
+.galleryStore {
+  width: 80vw;
+  margin: 0 auto; }
+
+.galleryStore__title {
+  width: 100%;
+  margin-left: 40px;
+  font-family: cursive;
+  font-size: 1.3em; }
+
+.galleryStore__image {
+  width: 100%;
+  height: 60vw;
+  margin: 0 auto;
+  border-radius: 10px; }
+
+.image-size-panel {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px; }
+
+.image-size-panel__item {
+  display: inline-block;
+  width: 24.3%;
+  height: 10vw;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding-top: 15px;
+  text-align: center;
+  background-color: #141414;
+  color: white; }
+
+/*# sourceMappingURL=galleryStore.css.map */

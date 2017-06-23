@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
+import GalleryStore from './galleryStore';
 
 class Gallery extends Component {
 
 	constructor() {
 		super();
-		this.openGalleryStore = this.openGalleryStore.bind(this)
+		this.state = {
+			photoSelected: false
+		}
+
 	}
 
 		render() {
@@ -12,9 +16,21 @@ class Gallery extends Component {
 			var photos = this.props.photos.map( function(photo, index) {
 
 				return(
-						<img onClick={this.openGalleryStore} className="gallery__image" key={index} value={photo} src={photo} />
+							<img onClick={openGalleryStore.bind(this)} className="gallery__image" key={index} value={index} src={photo.url} alt={photo.alt} />
 					)
+				function openGalleryStore() {
+					this.setState({photoSelected: true, selectedPhoto: photo})
+				}
+
 			}.bind(this))
+
+		if (this.state.photoSelected) {
+			return (
+					<div>
+						<GalleryStore photo={this.state.selectedPhoto}/>
+					</div>
+				)
+		}	
 
 		return(
 				<div>
@@ -26,10 +42,6 @@ class Gallery extends Component {
 				</div>	
 			)
 
-	}
-
-	openGalleryStore() {
-		console.log("Hello World")
 	}
 
 }
