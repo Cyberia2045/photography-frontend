@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 
 class Gallery extends Component {
 
-constructor() {
-	super();
-	this.openGalleryStore = this.openGalleryStore.bind(this)
-}
+	constructor() {
+		super();
+		this.openGalleryStore = this.openGalleryStore.bind(this)
+	}
 
-	render() {
+		render() {
 
-		var photos = this.props.photos.map( function(photo, index) {
+			var photos = this.props.photos.map( function(photo, index) {
 
-			return(
-					<img onClick={this.openGalleryStore} className="gallery__image" key={index} value={photo} src={photo} />
-				)
-		}.bind(this))
+				return(
+						<img onClick={this.openGalleryStore} className="gallery__image" key={index} value={photo} src={photo} />
+					)
+			}.bind(this))
 
 		return(
 				<div>

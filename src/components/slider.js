@@ -20,7 +20,7 @@ class Slider extends Component {
   render() {
 
     var slideStyling = {
-      backgroundImage: "url(" + this.state.photos[this.state.slideCount].url + ")",
+      backgroundImage: "url(" + this.state.photos[this.state.slideCount] + ")",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
       height: "100vh"
