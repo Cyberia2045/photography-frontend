@@ -51,7 +51,7 @@
 
 .image-size-panel__item {
   display: inline-block;
-  width: 24.3%;
+  width: 24%;
   height: 10vw;
   border: 1px solid white;
   border-radius: 10px;
@@ -73,10 +73,50 @@
   height: 10vw;
   border: 1px solid white;
   border-radius: 10px;
-  padding-top: 3px;
+  padding: 5px;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 2%;
   background-color: #141414;
   color: white; }
+
+@media (min-width: 500px) {
+  .galleryStore {
+    width: 50vw; }
+
+  .poster-image {
+    width: 50vw;
+    height: 37.5vw;
+    margin: 0 auto;
+    border-radius: 10px; }
+
+  .image-size-panel {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5px; }
+
+  .image-size-panel__item {
+    display: inline-block;
+    width: 24.3%;
+    height: 3vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-top: 5px;
+    text-align: center;
+    background-color: #141414;
+    color: white; }
+
+  .galleryStore__title {
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.3em;
+    line-height: 0.7;
+    color: #501e1e; }
+
+  .item-cost {
+    font-size: 1em; }
+
+  .purchase-button {
+    height: 5vw; } }
 
 /*# sourceMappingURL=galleryStore.css.map */

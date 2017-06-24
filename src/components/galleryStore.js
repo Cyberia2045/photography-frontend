@@ -7,13 +7,16 @@ class GalleryStore extends Component {
 		this.state = {
 			photo: props.photo,
 			imageClass: "poster-image",
-			price: "55.00"
+			price: "55.00",
+			total: this.total
 		}
 
 		this.smallImage = this.smallImage.bind(this)
 		this.mediumImage = this.mediumImage.bind(this)
 		this.largeImage = this.largeImage.bind(this)
 		this.posterImage = this.posterImage.bind(this)
+		this.addToCart = this.addToCart.bind(this)
+		this.total = this.total.bind(this)
 
 	}
 
@@ -30,7 +33,7 @@ class GalleryStore extends Component {
 				<p className="image-cost">${this.state.price}</p>
 				<h2 className="galleryStore__title">{this.state.photo.name}</h2>
 				<p className="galleryStore__description">{this.state.photo.description}</p>
-				<div className="purchase-button">Add to the Collection</div>
+				<div onClick={this.addToCart} className="purchase-button">Add to the Collection</div>
 			</div>
 			)
 	}
@@ -53,6 +56,15 @@ class GalleryStore extends Component {
 	smallImage() {
 		this.setState({ imageClass: "small-image",
 		 price: "40.00" })
+	}
+
+	addToCart() {
+		console.log(this.state.price)
+		console.log(this.state.photo.url)
+	}
+
+	total() {
+		this.setState({  })
 	}
 
 }

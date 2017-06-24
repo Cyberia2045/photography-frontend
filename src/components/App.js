@@ -43,7 +43,7 @@ class App extends Component {
     },
 
     {
-      name: "On the Rails at the Edge of Prarie Country",
+      name: "On the Rails at the Edge of Prairie Country",
       url: "https://farm4.staticflickr.com/3869/33404262086_331e34fe33_h.jpg",
       alt: "Grain Elevator Beside Railroad Tracks in West Kansas",
       description: "Lorem ipsum dolor sit amet, erant conceptam accommodare vim an. Duo persius eruditi deserunt eu, et eirmod cetero pri, mel dicit labores pertinax ne. Usu putant platonem torquatos eu, eos malis vocibus apeirian te, per ferri ubique in. Mei eleifend scriptorem at. Cu mel populo accumsan, eius movet epicurei nec ei. Pri virtute detraxit perpetua et, ut decore graecis est."
