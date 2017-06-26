@@ -2,17 +2,22 @@ import React, { Component } from 'react';
 
 class Cart extends Component {
 
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = {
-			photo: props.photo
-			total: 
+			photos: props.photos
 		}
 	}
 
 	render() {
 
-		return()
+		return(
+			<div>
+				<div className="shopping-cart">
+					<div className="item-total">{this.state.photos.length}</div>
+				</div>
+			</div>
+			)
 
 	}
 

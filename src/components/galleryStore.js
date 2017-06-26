@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Cart from './cart';
 
 class GalleryStore extends Component {
 
@@ -8,7 +9,7 @@ class GalleryStore extends Component {
 			photo: props.photo,
 			imageClass: "poster-image",
 			price: "55.00",
-			total: this.total
+			cartPhotos: []
 		}
 
 		this.smallImage = this.smallImage.bind(this)
@@ -16,8 +17,6 @@ class GalleryStore extends Component {
 		this.largeImage = this.largeImage.bind(this)
 		this.posterImage = this.posterImage.bind(this)
 		this.addToCart = this.addToCart.bind(this)
-		this.homeButton = this.homeButton.bind(this)
-		this.total = this.total.bind(this)
 
 	}
 
@@ -42,8 +41,6 @@ class GalleryStore extends Component {
 						<p className="galleryStore__description">{this.state.photo.description}</p>
 						<div onClick={this.addToCart} className="purchase-button">Add to the Collection</div>
 					</div>
-
-			<div onClick={this.homeButton} className="homeButton">Home</div>
 			
 			</div>
 			)
@@ -70,16 +67,8 @@ class GalleryStore extends Component {
 	}
 
 	addToCart() {
-		console.log(this.state.price)
-		console.log(this.state.photo.url)
-	}
-
-	total() {
-		this.setState({  })
-	}
-
-	homeButton() {
-
+		let cartPhoto = {photo: this.state.photo, price: this.state.price, imageClass: this.state.imageClass}
+		this.props.updateCart(cartPhoto)
 	}
 
 }

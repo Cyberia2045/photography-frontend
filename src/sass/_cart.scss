@@ -1,0 +1,28 @@
+.shopping-cart {
+	position: absolute;
+	z-index: 10;
+	top: 0.5%;
+	right: 2%;
+	width: 10vw;
+	height: 10vw;
+	background-image: url("https://image.flaticon.com/icons/svg/60/60992.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.item-total {
+	position: absolute;
+	z-index: 11;
+	color: white;
+	top: 10%;
+	right: 30%;
+}
+
+@media (min-width: 500px) {
+
+	.shopping-cart {
+		width: 6vw;
+		height: 6vw;
+	}
+
+}

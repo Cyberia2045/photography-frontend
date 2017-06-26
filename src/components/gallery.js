@@ -9,6 +9,8 @@ class Gallery extends Component {
 			photoSelected: false
 		}
 
+		this.updateCart = this.updateCart.bind(this);
+
 	}
 
 		render() {
@@ -27,7 +29,7 @@ class Gallery extends Component {
 		if (this.state.photoSelected) {
 			return (
 					<div>
-						<GalleryStore photo={this.state.selectedPhoto}/>
+						<GalleryStore photo={this.state.selectedPhoto} updateCart={this.updateCart} />
 					</div>
 				)
 		}	
@@ -42,6 +44,10 @@ class Gallery extends Component {
 				</div>	
 			)
 
+	}
+
+	updateCart(cartPhoto) {
+		this.props.updateCart(cartPhoto)
 	}
 
 }

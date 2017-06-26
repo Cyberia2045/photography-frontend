@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from './carousel';
 import Gallery from './gallery'
+import Cart from "./cart";
 import '../css/styles.css';
 
 class App extends Component {
@@ -8,7 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      cartPhotos: []
     }
 
     this.explorerCarousel = [
@@ -72,33 +73,57 @@ class App extends Component {
 
       ],
       
-      "holiday": ["http://images.redfunnel.co.uk/images/ferry-travel/red-osprey-picture-gallery/red_osprey_leaves_cowes_roads.jpg", "https://www.e-oprawa.pl/media/PL/img/galeria/580x360/661.jpg", "https://metrouk2.files.wordpress.com/2015/07/ad_175752041.jpg"],
+      "Capturing the Human Form": [],
       
-      "beach": []
+      "Moments Frozen in Time": []
     }
 
     this.loadGallery = this.loadGallery.bind(this)
-
+    this.updateCart = this.updateCart.bind(this)
+    this.renderHome = this.renderHome.bind(this)
   }
 
   render() {
 
+    let renderedComponent;
+
     if (this.state.selectedGallery) {
       
-      return <Gallery name={this.state.selectedGallery} photos={this.gallery[this.state.selectedGallery]}/>
+      renderedComponent = (
+        <div>
+
+          <div onClick={this.renderHome} className="homeButton">Home</div>
+
+          <Gallery name={this.state.selectedGallery} photos={this.gallery[this.state.selectedGallery]} updateCart={this.updateCart} />
+
+        </div>
+        )
 
     }
 
-    return (
-      <div className="App">
-        
-          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Photography By Michael Nagy" carouselButtonTitle="Explore" />   
+    else {
+      renderedComponent = (
+
+        <span>
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Photography By Michael Nagy" scrollText="Welcome"/>   
         
           <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Exploring the World Through Light and Glass" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="Exploring the World Through Light and Glass" /> 
 
-          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Travel Photography" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="holiday" /> 
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Capturing the Human Form" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="holiday" /> 
 
-          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Travel Photography" carouselButtonTitle="Explore" /> 
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Moments Frozen in Time" carouselButtonTitle="Explore" /> 
+
+          </span>
+        )
+    }
+
+    return (
+
+      <div className="App">
+
+          <Cart photos={this.state.cartPhotos}/>
+
+          {renderedComponent}
 
       </div>
 
@@ -107,6 +132,17 @@ class App extends Component {
 
   loadGallery(gallery) {
     this.setState({selectedGallery: gallery})
+  }
+
+  updateCart(cartPhoto) {
+    console.log(this.state.cartPhotos)
+    let updatedCart = this.state.cartPhotos
+    updatedCart.push(cartPhoto)
+    this.setState({ cartPhotos: updatedCart})
+  }
+
+  renderHome() {
+    this.setState({ selectedGallery: null })
   }
 
 }
