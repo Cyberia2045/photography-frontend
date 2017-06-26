@@ -16,24 +16,35 @@ class GalleryStore extends Component {
 		this.largeImage = this.largeImage.bind(this)
 		this.posterImage = this.posterImage.bind(this)
 		this.addToCart = this.addToCart.bind(this)
+		this.homeButton = this.homeButton.bind(this)
 		this.total = this.total.bind(this)
 
 	}
 
 	render() {
+
 		return(
-			<div className="galleryStore">
-				<div className="image-size-panel">
-					<div onClick={this.smallImage} className="image-size-panel__item">11x14</div>
-					<div onClick={this.mediumImage} className="image-size-panel__item">11x17</div>
-					<div onClick={this.largeImage} className="image-size-panel__item">16x20</div>
-					<div onClick={this.posterImage} className="image-size-panel__item">18x24</div>
-				</div>
-				<img className={this.state.imageClass} src={this.state.photo.url} alt={this.state.photo.alt} />
-				<p className="image-cost">${this.state.price}</p>
-				<h2 className="galleryStore__title">{this.state.photo.name}</h2>
-				<p className="galleryStore__description">{this.state.photo.description}</p>
-				<div onClick={this.addToCart} className="purchase-button">Add to the Collection</div>
+
+			<div>
+
+					<div className="galleryStore">
+
+						<div className="image-size-panel">
+							<div onClick={this.smallImage} className="image-size-panel__item">11x14</div>
+							<div onClick={this.mediumImage} className="image-size-panel__item">11x17</div>
+							<div onClick={this.largeImage} className="image-size-panel__item">16x20</div>
+							<div onClick={this.posterImage} className="image-size-panel__item">18x24</div>
+						</div>
+
+						<img className={this.state.imageClass} src={this.state.photo.url} alt={this.state.photo.alt} />
+						<p className="image-cost">${this.state.price}</p>
+						<h2 className="galleryStore__title">{this.state.photo.name}</h2>
+						<p className="galleryStore__description">{this.state.photo.description}</p>
+						<div onClick={this.addToCart} className="purchase-button">Add to the Collection</div>
+					</div>
+
+			<div onClick={this.homeButton} className="homeButton">Home</div>
+			
 			</div>
 			)
 	}
@@ -65,6 +76,10 @@ class GalleryStore extends Component {
 
 	total() {
 		this.setState({  })
+	}
+
+	homeButton() {
+
 	}
 
 }
