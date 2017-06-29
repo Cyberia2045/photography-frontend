@@ -12,7 +12,8 @@ html, body {
 
 .gallery__title {
   font-family: cursive;
-  text-align: center; }
+  text-align: center;
+  margin-top: 50px; }
 
 .gallery__image {
   width: 70vw;
@@ -23,6 +24,10 @@ html, body {
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 20px; }
+
+.homeButton {
+  position: absolute;
+  top: 0.5%; }
 
 @media (min-width: 640px) {
   .gallery {
@@ -43,7 +48,10 @@ html, body {
   .gallery__image {
     width: 25vw;
     height: 20vw;
-    margin: 10px; } }
+    margin: 10px; }
+
+  .gallery__title {
+    margin-top: 80px; } }
 @media (min-width: 860px) {
   .gallery {
     width: 100vw;
@@ -62,7 +70,10 @@ html, body {
   .gallery__image {
     width: 25vw;
     height: 20vw;
-    margin: 10px; } }
+    margin: 10px; }
+
+  .homeButton {
+    width: 8%; } }
 .nextArrow {
   position: absolute;
   top: 50%;
@@ -108,6 +119,106 @@ html, body {
   color: #e6e6e6;
   background-color: rgba(120, 120, 120, 0.7); }
 
+.scrollText {
+  position: absolute;
+  z-index: 10;
+  width: 25%;
+  height: 4%;
+  padding: 1%;
+  bottom: 1%;
+  left: 37.5%;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1em;
+  color: #e6e6e6;
+  background-color: rgba(120, 120, 120, 0.7); }
+
+@media (min-width: 1100px) {
+  .scrollText {
+    width: 15%;
+    left: 42.5%;
+    padding: 0.5%; } }
+.shopping-cart {
+  position: absolute;
+  z-index: 10;
+  top: 0.5%;
+  right: 2%;
+  width: 10vw;
+  height: 10vw;
+  background-image: url("https://image.flaticon.com/icons/svg/60/60992.svg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.item-total {
+  position: absolute;
+  z-index: 11;
+  color: white;
+  top: 10%;
+  right: 30%; }
+
+@media (min-width: 500px) {
+  .shopping-cart {
+    width: 6vw;
+    height: 6vw; } }
+@media (min-width: 980px) {
+  .shopping-cart {
+    width: 4vw;
+    height: 4vw; }
+
+  .item-total {
+    top: 10%;
+    right: 35%; } }
+@media (min-width: 1100px) {
+  .shopping-cart {
+    width: 3vw;
+    height: 3vw; } }
+.checkout {
+  width: 100%;
+  height: 30%;
+  border-bottom: 2px dashed black; }
+
+.checkout__photo {
+  width: 30%;
+  height: 100%;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  border-radius: 10px; }
+
+.checkout__price {
+  font-size: 1.2em;
+  font-family: "Futura";
+  margin-left: 5%; }
+
+.checkout__title {
+  font-size: 1.2em;
+  font-family: "Futura";
+  margin-left: 5%;
+  margin-top: 2%; }
+
+@media (min-width: 500px) {
+  .checkout__price {
+    float: right;
+    margin-top: 10%;
+    margin-right: 30%; } }
+@media (min-width: 700px) {
+  .checkout__title {
+    margin-left: 50%; }
+
+  .checkout__photo {
+    margin-top: 0; } }
+@media (min-width: 980px) {
+  .checkout__price {
+    margin-right: 35%; } }
+@media (min-width: 1200px) {
+  .checkout__title {
+    margin-left: 40%; }
+
+  .checkout__price {
+    margin-right: 55%; }
+
+  .checkout__photo {
+    width: 20%; } }
 .galleryStore {
   width: 80vw;
   margin: 0 auto; }
@@ -157,11 +268,11 @@ html, body {
 .image-size-panel {
   width: 100%;
   margin: 0 auto;
-  margin-top: 20px; }
+  margin-top: 10px; }
 
 .image-size-panel__item {
   display: inline-block;
-  width: 24.3%;
+  width: 24%;
   height: 10vw;
   border: 1px solid white;
   border-radius: 10px;
@@ -183,12 +294,202 @@ html, body {
   height: 10vw;
   border: 1px solid white;
   border-radius: 10px;
+  padding: 5px;
   padding-top: 3px;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 2%;
   background-color: #141414;
   color: white; }
 
+.homeButton {
+  position: relative;
+  width: 12%;
+  height: 5vw;
+  color: white;
+  background-color: #323232;
+  border: 1px solid white;
+  padding: 1%;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 0.5%;
+  margin-bottom: 5px;
+  margin-left: 1%; }
+
+@media (min-width: 500px) {
+  .galleryStore {
+    width: 50vw; }
+
+  .poster-image {
+    height: 30vw;
+    width: 40vw;
+    margin-left: 11%;
+    margin-top: 2%; }
+
+  .large-image {
+    height: 26.4vw;
+    width: 33.2vw;
+    margin-left: 16.5%; }
+
+  .medium-image {
+    height: 18.3vw;
+    width: 35.5vw;
+    margin-left: 15%; }
+
+  .small-image {
+    height: 18.3vw;
+    width: 29vw;
+    margin-left: 20.5%; }
+
+  .image-size-panel {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 0.5%; }
+
+  .image-size-panel__item {
+    display: inline-block;
+    width: 24.3%;
+    height: 3vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-top: 5px;
+    text-align: center;
+    background-color: #141414;
+    color: white; }
+
+  .galleryStore__title {
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.3em;
+    color: #501e1e; }
+
+  .item-cost {
+    font-size: 0.8em; }
+
+  .purchase-button {
+    height: 5vw; }
+
+  .homeButton {
+    position: absolute;
+    width: 8vw;
+    height: 3vw;
+    margin-top: 0.1%; } }
+@media (min-width: 700px) {
+  .galleryStore {
+    width: 70vw;
+    margin: 0 auto; }
+
+  .poster-image {
+    height: 52.5vw;
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 10%; }
+
+  .large-image {
+    height: 46.48vw;
+    width: 58.1vw;
+    margin-left: 8%;
+    margin-top: 10%; }
+
+  .medium-image {
+    height: 32.3vw;
+    width: 49.7vw;
+    margin-top: 10%;
+    margin-left: 15.5%; }
+
+  .small-image {
+    height: 32.1vw;
+    width: 40.6vw;
+    margin-top: 10%;
+    margin-left: 22%; }
+
+  .image-size-panel {
+    padding-top: 25px; }
+
+  .purchase-button {
+    height: 3vw;
+    margin-top: 5%;
+    padding-top: 10px; }
+
+  .galleryStore__description {
+    width: 80%;
+    margin: 0 auto; }
+
+  .homeButton {
+    height: 1.6vw;
+    padding: 1.6%; } }
+@media (min-width: 700px) and (min-width: 980px) {
+  .poster-image {
+    width: 80%;
+    height: 42.8vw;
+    margin-left: 11%;
+    margin-top: 5%; }
+
+  .large-image {
+    width: 67.2%;
+    height: 37.63vw;
+    margin-left: 17.5%;
+    margin-top: 3%; }
+
+  .medium-image {
+    width: 56.8%;
+    height: 26.39vw;
+    margin-top: 10%;
+    margin-left: 21%; }
+
+  .small-image {
+    width: 45.44%;
+    height: 26.39vw;
+    margin-top: 8%;
+    margin-left: 27%; }
+
+  .homeButton {
+    height: 1.2vw;
+    padding: 1.2%; } }
+@media (min-width: 700px) and (min-width: 1100px) {
+  .galleryStore {
+    width: 50vw;
+    margin: 0 auto; }
+
+  .poster-image {
+    height: 30vw;
+    width: 40vw;
+    margin-left: 11%;
+    margin-top: 2%; }
+
+  .large-image {
+    height: 26.4vw;
+    width: 33.2vw;
+    margin-left: 16.5%; }
+
+  .medium-image {
+    height: 18.3vw;
+    width: 35.5vw;
+    margin-left: 15%; }
+
+  .small-image {
+    height: 18.3vw;
+    width: 29vw;
+    margin-left: 21%; }
+
+  .image-size-panel {
+    padding-top: 0;
+    height: 5%;
+    margin-top: 0; }
+
+  .purchase-button {
+    height: 2vw;
+    margin-top: 3%;
+    padding-top: 10px; }
+
+  .galleryStore__description {
+    width: 100%;
+    margin: 0 auto; }
+
+  .homeButton {
+    width: 8%;
+    height: 1vw;
+    padding: 1%; } }
 .carousel-title {
   position: absolute;
   z-index: 10;

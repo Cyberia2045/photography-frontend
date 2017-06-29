@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Carousel from './carousel';
-import Gallery from './gallery'
+import Gallery from './gallery';
+import Checkout from './checkout';
+import Cart from "./cart";
 import '../css/styles.css';
 
 class App extends Component {
@@ -8,7 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      cartPhotos: [],
+      cartRendered: false
     }
 
     this.explorerCarousel = [
@@ -43,7 +46,7 @@ class App extends Component {
     },
 
     {
-      name: "On the Rails at the Edge of Prarie Country",
+      name: "On the Rails at the Edge of Prairie Country",
       url: "https://farm4.staticflickr.com/3869/33404262086_331e34fe33_h.jpg",
       alt: "Grain Elevator Beside Railroad Tracks in West Kansas",
       description: "Lorem ipsum dolor sit amet, erant conceptam accommodare vim an. Duo persius eruditi deserunt eu, et eirmod cetero pri, mel dicit labores pertinax ne. Usu putant platonem torquatos eu, eos malis vocibus apeirian te, per ferri ubique in. Mei eleifend scriptorem at. Cu mel populo accumsan, eius movet epicurei nec ei. Pri virtute detraxit perpetua et, ut decore graecis est."
@@ -72,41 +75,97 @@ class App extends Component {
 
       ],
       
-      "holiday": ["http://images.redfunnel.co.uk/images/ferry-travel/red-osprey-picture-gallery/red_osprey_leaves_cowes_roads.jpg", "https://www.e-oprawa.pl/media/PL/img/galeria/580x360/661.jpg", "https://metrouk2.files.wordpress.com/2015/07/ad_175752041.jpg"],
+      "Capturing the Human Form": [],
       
-      "beach": []
+      "Moments Frozen in Time": []
     }
 
     this.loadGallery = this.loadGallery.bind(this)
-
+    this.updateCart = this.updateCart.bind(this)
+    this.renderHome = this.renderHome.bind(this)
+    this.renderCart = this.renderCart.bind(this)
   }
 
   render() {
 
+    let renderedComponent;
+
     if (this.state.selectedGallery) {
       
-      return <Gallery name={this.state.selectedGallery} photos={this.gallery[this.state.selectedGallery]}/>
+      renderedComponent = (
+        <div>
+
+          <div onClick={this.renderHome} className="homeButton">Home</div>
+
+          <Gallery name={this.state.selectedGallery} photos={this.gallery[this.state.selectedGallery]} updateCart={this.updateCart} />
+
+        </div>
+        )
 
     }
 
-    return (
-      <div className="App">
-        
-          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Photography By Michael Nagy" carouselButtonTitle="Explore" />   
+    else if (this.state.cartRendered) {
+      renderedComponent = (
+          <div>
+            <Checkout photos={this.state.cartPhotos} />
+          </div>
+        )
+    }
+
+    else {
+      renderedComponent = (
+
+        <span>
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Photography By Michael Nagy" scrollText="Explore" />   
         
           <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Exploring the World Through Light and Glass" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="Exploring the World Through Light and Glass" /> 
 
-          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Travel Photography" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="holiday" /> 
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Capturing the Human Form" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="holiday" /> 
 
-          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Travel Photography" carouselButtonTitle="Explore" /> 
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Moments Frozen in Time" carouselButtonTitle="Explore" /> 
+
+          </span>
+        )
+    }
+
+    if (this.state.cartRendered === false) {
+      var checkoutIcon = <Cart photos={this.state.cartPhotos} renderCart={this.renderCart} />
+    }
+
+    else {
+      var checkoutIcon = <span></span>
+    }
+
+    return (
+
+      <div className="App">
+
+          {checkoutIcon}
+
+          {renderedComponent}
 
       </div>
 
-    );
+      );
   }
 
   loadGallery(gallery) {
     this.setState({selectedGallery: gallery})
+  }
+
+  updateCart(cartPhoto) {
+    let updatedCart = this.state.cartPhotos
+    updatedCart.push(cartPhoto)
+    this.setState({ cartPhotos: updatedCart})
+  }
+
+  renderHome() {
+    this.setState({ selectedGallery: null })
+    this.setState({ cartRendered: false })
+  }
+
+  renderCart() {
+    this.setState({ cartRendered: true })
   }
 
 }

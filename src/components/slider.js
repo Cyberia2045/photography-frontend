@@ -54,6 +54,11 @@ class Slider extends Component {
     }
   }
 
+    componentDidMount() { 
+      window.setInterval(this.nextSlide, 7000);
+    }  
+
+
 }
 
 export default Slider;
