@@ -20,19 +20,32 @@ class Carousel extends Component {
 
 		render() {
 
+			let scrollText;
+			if (this.props.scrollText) {
+				scrollText = <div onClick={this.slideScroll} className="scrollText">{this.props.scrollText}</div>
+			} else {
+				scrollText = <span></span>
+			}
+
 			return(
 				<div style={this.carouselStyle}>
 					<div className="carousel-title">{this.state.carouselTitle}</div>
-					<Slider photos={this.state.carouselSlider} />
+					<Slider photos={this.state.carouselSlider}/>
 					<div onClick={this.handleLoadGallery} className="carousel-button">{this.state.carouselButtonTitle}</div>
+					{scrollText}
 				</div>
 				)
 
 		}
 
 		handleLoadGallery() {
-				this.props.loadGallery(this.props.gallery)
+			this.props.loadGallery(this.props.gallery)
 		}
+
+		slideScroll() {
+			console.log("hello world")
+		}
+
 }
 
 export default Carousel;

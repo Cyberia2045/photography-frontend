@@ -1,0 +1,345 @@
+
+.galleryStore {
+	width: 80vw;
+	margin: 0 auto;
+}
+
+	.galleryStore__title {
+		text-align: center;
+		font-family: cursive;
+		font-size: 1.3em;
+		color: rgb(80,30,30);
+	}
+
+	.poster-image {
+		width: 100%;
+		height: 60vw;
+		margin: 0 auto;
+		margin-top: 10px;
+		border-radius: 10px;
+	}
+
+	.large-image {
+		width: 84%;
+		height: 54vw;
+		margin: 0 auto;
+		margin-left: 8%;
+		margin-top: 10px;
+		border-radius: 10px;
+	}	
+
+	.medium-image {
+		width: 71%;
+		height: 37vw;
+		margin: 0 auto;
+		margin-left: 14%;
+		margin-top: 10px;
+		border-radius: 10px;
+	}
+
+	.small-image {
+		width: 58%;
+		height: 37vw;
+		margin: 0 auto;
+		margin-left: 21%;
+		margin-top: 10px;
+		border-radius: 10px;
+	}
+
+	.galleryStore__description {
+		text-align: center;
+		font-family: "Futura";
+		color: rgb(30,30,30);
+	}
+
+.image-size-panel	{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+	.image-size-panel__item {
+		display: inline-block;
+    width: 24%;
+    height: 10vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-top: 15px;
+    text-align: center;
+    background-color: #141414;
+    color: white;
+	}
+
+		.image-size-panel__item:hover {
+			color: firebrick;
+		}		
+
+	.image-cost {
+		text-align: center;
+		font-family: "Verdana";
+		font-size: 1.2em;
+	}
+
+	.purchase-button {
+		width: 30%;
+    height: 10vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    padding-top: 3px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    background-color: #141414;
+    color: white;
+	}
+
+	.homeButton {
+		position: relative;
+		width: 12%;
+		height: 5vw;
+		color: white;
+		background-color: rgb(50,50,50);
+		border: 1px solid white;
+    padding: 1%;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 0.5%;
+    margin-bottom: 5px;
+    margin-left: 1%;
+	}
+
+	// SmartPhone (Landscape)
+	@media (min-width: 500px) {
+		
+		.galleryStore {
+			width: 50vw;
+		}
+
+		.poster-image {
+	    height: 30vw; //18"
+	    width: 40vw; 	//24"
+	    margin-left: 11%;
+	    margin-top: 2%;
+		}
+
+		.large-image {
+			height: 26.4vw;   //16"
+			width: 33.2vw;    //20"
+			margin-left: 16.5%;
+		}
+
+		.medium-image {
+			height: 18.3vw; //11"
+			width: 35.5vw;  //17"
+			margin-left: 15%;
+		}
+
+		.small-image {
+			height: 18.3vw;  //11"
+			width: 29vw;     //14"
+			margin-left: 20.5%;
+		}
+
+		.image-size-panel {
+	    width: 100%;
+	    margin: 0 auto;
+	    margin-top: 0.5%;
+		}
+
+		.image-size-panel__item {
+	    display: inline-block;
+	    width: 24.3%;
+	    height: 3vw;
+	    border: 1px solid white;
+	    border-radius: 10px;
+	    padding-top: 5px;
+	    text-align: center;
+	    background-color: #141414;
+	    color: white;
+		}
+
+		.galleryStore__title {
+	    text-align: center;
+	    font-family: cursive;
+	    font-size: 1.3em;
+	    color: #501e1e;
+		}
+
+		.item-cost {
+			font-size: 0.8em;
+		}
+
+		.purchase-button {
+			height: 5vw;
+		}
+
+		.homeButton {
+			position: absolute;
+			width: 8vw;
+			height: 3vw;
+			margin-top: 0.1%;
+		}
+	
+	}
+
+	// Tablet (Portrait)
+	@media (min-width: 700px) {
+		.galleryStore {
+			width: 70vw;
+			margin: 0 auto;
+		}
+
+		.poster-image {
+	    height: 52.5vw;
+	    width: 70vw;
+	    margin: 0 auto;
+	    margin-top: 10%;
+		}
+
+		.large-image {
+			height: 46.48vw;
+			width: 58.1vw;
+			margin-left: 8%;
+			margin-top: 10%;
+		}
+
+		.medium-image {
+			height: 32.3vw;
+			width: 49.7vw;
+			margin-top: 10%;
+			margin-left: 15.5%;
+		}
+
+		.small-image {
+			height: 32.1vw;
+			width: 40.6vw;
+			margin-top: 10%;
+			margin-left: 22%;
+		}
+
+		.image-size-panel {
+	    padding-top: 25px;
+		}
+
+		.purchase-button {
+			height: 3vw;
+			margin-top: 5%;
+			padding-top: 10px;
+		}
+
+		.galleryStore__description {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.homeButton {
+			height: 1.6vw;
+			padding: 1.6%;
+		}
+
+	// Tablet Landscape
+	@media (min-width: 980px) {
+		.poster-image {
+	    width: 80%;
+	    height: 42.8vw;
+	    margin-left: 11%;
+	    margin-top: 5%;
+		}
+
+		.large-image {
+			width: 67.2%;
+			height: 37.63vw;
+			margin-left: 17.5%;
+			margin-top: 3%;
+		}
+
+		.medium-image {
+			width: 56.8%;
+			height: 26.39vw;
+			margin-top: 10%;
+			margin-left: 21%;
+		}
+
+		.small-image {
+			width: 45.44%;
+			height: 26.39vw;
+			margin-top: 8%;
+			margin-left: 27%;
+		}
+
+		.homeButton {
+			height: 1.2vw;
+			padding: 1.2%;
+		}
+
+	}	
+
+	// Desktop
+	@media (min-width: 1100px) {
+		.galleryStore {
+			width: 50vw;
+			margin: 0 auto;
+		}
+
+		.poster-image {
+	    height: 30vw; //18"
+	    width: 40vw; 	//24"
+	    margin-left: 11%;
+	    margin-top: 2%;
+		}
+
+		.large-image {
+			height: 26.4vw;   //16"
+			width: 33.2vw;    //20"
+			margin-left: 16.5%;
+		}
+
+		.medium-image {
+			height: 18.3vw; //11"
+			width: 35.5vw;  //17"
+			margin-left: 15%;
+		}
+
+		.small-image {
+			height: 18.3vw;  //11"
+			width: 29vw;     //14"
+			margin-left: 21%;
+		}
+
+		.image-size-panel {
+	    padding-top: 0;
+	    height: 5%;
+	    margin-top: 0;
+		}
+
+		.purchase-button {
+			height: 2vw;
+			margin-top: 3%;
+			padding-top: 10px;
+		}
+
+		.galleryStore__description {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.homeButton {
+			width: 8%;
+			height: 1vw;
+			padding: 1%;
+		}
+
+	}
+
+	}
+
+
+
+
+
+
+
+
+
+

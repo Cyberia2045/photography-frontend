@@ -1,0 +1,78 @@
+.checkout {
+	width: 100%;
+	height: 30%;
+	border-bottom: 2px dashed black;
+}
+
+	.checkout__photo {
+		width: 30%;
+		height: 100%;
+		margin-left: 5%;
+		margin-top: 5%;
+		margin-bottom: 2%;
+		border-radius: 10px;
+	}
+
+	.checkout__price {
+		font-size: 1.2em;
+		font-family: "Futura";
+		margin-left: 5%;
+	}
+
+	.checkout__title {
+		font-size: 1.2em;
+		font-family: "Futura";
+		margin-left: 5%;
+		margin-top: 2%;
+	}
+
+@media (min-width: 500px) {
+	.checkout__price {
+		float: right;
+		margin-top: 10%;
+		margin-right: 30%;
+	}
+}
+
+@media (min-width: 700px) {
+	.checkout__title {
+		margin-left: 50%;
+	}
+
+	.checkout__photo { 
+		margin-top: 0;
+	}
+}
+
+@media (min-width: 980px) {
+	.checkout__price {
+		margin-right: 35%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.checkout__title {
+		margin-left: 40%;
+	}
+
+	.checkout__price {
+		margin-right: 55%;
+	}
+
+	.checkout__photo {
+		width: 20%
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

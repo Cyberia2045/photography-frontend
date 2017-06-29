@@ -1,20 +1,38 @@
 import React, { Component } from 'react';
+import GalleryStore from './galleryStore';
 
 class Gallery extends Component {
 
-constructor() {
-	super();
-	this.openGalleryStore = this.openGalleryStore.bind(this)
-}
+	constructor() {
+		super();
+		this.state = {
+			photoSelected: false
+		}
 
-	render() {
+		this.updateCart = this.updateCart.bind(this);
 
-		var photos = this.props.photos.map( function(photo, index) {
+	}
 
-			return(
-					<img onClick={this.openGalleryStore} className="gallery__image" key={index} value={photo} src={photo} />
+		render() {
+
+			var photos = this.props.photos.map( function(photo, index) {
+
+				return(
+							<img onClick={openGalleryStore.bind(this)} className="gallery__image" key={index} value={index} src={photo.url} alt={photo.alt} />
+					)
+				function openGalleryStore() {
+					this.setState({photoSelected: true, selectedPhoto: photo})
+				}
+
+			}.bind(this))
+
+		if (this.state.photoSelected) {
+			return (
+					<div>
+						<GalleryStore photo={this.state.selectedPhoto} updateCart={this.updateCart} />
+					</div>
 				)
-		}.bind(this))
+		}	
 
 		return(
 				<div>
@@ -28,8 +46,8 @@ constructor() {
 
 	}
 
-	openGalleryStore() {
-		console.log("Hello World")
+	updateCart(cartPhoto) {
+		this.props.updateCart(cartPhoto)
 	}
 
 }
