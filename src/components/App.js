@@ -128,17 +128,25 @@ class App extends Component {
         )
     }
 
+    if (this.state.cartRendered === false) {
+      var checkoutIcon = <Cart photos={this.state.cartPhotos} renderCart={this.renderCart} />
+    }
+
+    else {
+      var checkoutIcon = <span></span>
+    }
+
     return (
 
       <div className="App">
 
-          <Cart photos={this.state.cartPhotos} renderCart={this.renderCart} />
+          {checkoutIcon}
 
           {renderedComponent}
 
       </div>
 
-    );
+      );
   }
 
   loadGallery(gallery) {
