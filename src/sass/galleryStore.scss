@@ -95,6 +95,7 @@
 	}
 
 	.homeButton {
+		position: relative;
 		width: 12%;
 		height: 5vw;
 		color: white;
@@ -103,7 +104,7 @@
     padding: 1%;
     border-radius: 10px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 0.5%;
     margin-bottom: 5px;
     margin-left: 1%;
 	}
@@ -143,7 +144,7 @@
 		.image-size-panel {
 	    width: 100%;
 	    margin: 0 auto;
-	    margin-top: 5px;
+	    margin-top: 0.5%;
 		}
 
 		.image-size-panel__item {
@@ -174,10 +175,11 @@
 		}
 
 		.homeButton {
+			position: absolute;
+			width: 8vw;
 			height: 3vw;
+			margin-top: 0.1%;
 		}
-
-
 	
 	}
 

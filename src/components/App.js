@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from './carousel';
-import Gallery from './gallery'
+import Gallery from './gallery';
+import Checkout from './checkout';
 import Cart from "./cart";
 import '../css/styles.css';
 
@@ -9,7 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      cartPhotos: []
+      cartPhotos: [],
+      cartRendered: false
     }
 
     this.explorerCarousel = [
@@ -81,6 +83,7 @@ class App extends Component {
     this.loadGallery = this.loadGallery.bind(this)
     this.updateCart = this.updateCart.bind(this)
     this.renderHome = this.renderHome.bind(this)
+    this.renderCart = this.renderCart.bind(this)
   }
 
   render() {
@@ -101,11 +104,19 @@ class App extends Component {
 
     }
 
+    else if (this.state.cartRendered) {
+      renderedComponent = (
+          <div>
+            <Checkout photos={this.state.cartPhotos} />
+          </div>
+        )
+    }
+
     else {
       renderedComponent = (
 
         <span>
-          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Photography By Michael Nagy" scrollText="Welcome"/>   
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Photography By Michael Nagy" scrollText="Explore" />   
         
           <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Exploring the World Through Light and Glass" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="Exploring the World Through Light and Glass" /> 
 
@@ -121,7 +132,7 @@ class App extends Component {
 
       <div className="App">
 
-          <Cart photos={this.state.cartPhotos}/>
+          <Cart photos={this.state.cartPhotos} renderCart={this.renderCart} />
 
           {renderedComponent}
 
@@ -135,7 +146,6 @@ class App extends Component {
   }
 
   updateCart(cartPhoto) {
-    console.log(this.state.cartPhotos)
     let updatedCart = this.state.cartPhotos
     updatedCart.push(cartPhoto)
     this.setState({ cartPhotos: updatedCart})
@@ -143,6 +153,11 @@ class App extends Component {
 
   renderHome() {
     this.setState({ selectedGallery: null })
+    this.setState({ cartRendered: false })
+  }
+
+  renderCart() {
+    this.setState({ cartRendered: true })
   }
 
 }

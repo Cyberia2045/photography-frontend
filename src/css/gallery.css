@@ -6,7 +6,8 @@
 
 .gallery__title {
   font-family: cursive;
-  text-align: center; }
+  text-align: center;
+  margin-top: 50px; }
 
 .gallery__image {
   width: 70vw;
@@ -17,6 +18,10 @@
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 20px; }
+
+.homeButton {
+  position: absolute;
+  top: 0.5%; }
 
 @media (min-width: 640px) {
   .gallery {
@@ -37,7 +42,10 @@
   .gallery__image {
     width: 25vw;
     height: 20vw;
-    margin: 10px; } }
+    margin: 10px; }
+
+  .gallery__title {
+    margin-top: 80px; } }
 @media (min-width: 860px) {
   .gallery {
     width: 100vw;
@@ -56,6 +64,9 @@
   .gallery__image {
     width: 25vw;
     height: 20vw;
-    margin: 10px; } }
+    margin: 10px; }
+
+  .homeButton {
+    width: 8%; } }
 
 /*# sourceMappingURL=gallery.css.map */

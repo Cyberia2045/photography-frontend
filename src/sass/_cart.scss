@@ -26,3 +26,27 @@
 	}
 
 }
+
+@media (min-width: 980px) {
+
+	.shopping-cart {
+		width: 4vw;
+		height: 4vw;
+	}
+
+	.item-total {
+		top: 10%;
+		right: 35%;
+	}
+}
+
+@media (min-width: 1100px) {
+	.shopping-cart {
+		width: 3vw;
+		height: 3vw;
+	}
+}
+
+
+
+
