@@ -196,6 +196,29 @@ html, body {
   margin-left: 5%;
   margin-top: 2%; }
 
+@media (min-width: 500px) {
+  .checkout__price {
+    float: right;
+    margin-top: 10%;
+    margin-right: 30%; } }
+@media (min-width: 700px) {
+  .checkout__title {
+    margin-left: 50%; }
+
+  .checkout__photo {
+    margin-top: 0; } }
+@media (min-width: 980px) {
+  .checkout__price {
+    margin-right: 35%; } }
+@media (min-width: 1200px) {
+  .checkout__title {
+    margin-left: 40%; }
+
+  .checkout__price {
+    margin-right: 55%; }
+
+  .checkout__photo {
+    width: 20%; } }
 .galleryStore {
   width: 80vw;
   margin: 0 auto; }
