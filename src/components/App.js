@@ -90,7 +90,16 @@ class App extends Component {
 
     let renderedComponent;
 
-    if (this.state.selectedGallery) {
+    if (this.state.cartRendered) {
+      renderedComponent = (
+          <div>
+            <Checkout photos={this.state.cartPhotos} />
+            <div onClick={this.renderHome} className="homeButton">Home</div>
+          </div>
+        )
+    }
+    
+    else if (this.state.selectedGallery) {
       
       renderedComponent = (
         <div>
@@ -104,13 +113,6 @@ class App extends Component {
 
     }
 
-    else if (this.state.cartRendered) {
-      renderedComponent = (
-          <div>
-            <Checkout photos={this.state.cartPhotos} />
-          </div>
-        )
-    }
 
     else {
       renderedComponent = (

@@ -200,7 +200,13 @@ html, body {
   .checkout__price {
     float: right;
     margin-top: 10%;
-    margin-right: 30%; } }
+    margin-right: 30%; }
+
+  .checkout__title {
+    font-size: 1.2em;
+    font-family: "Futura";
+    margin-left: 40%;
+    margin-top: 2%; } }
 @media (min-width: 700px) {
   .checkout__title {
     margin-left: 50%; }
