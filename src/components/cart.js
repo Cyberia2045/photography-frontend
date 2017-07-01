@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Checkout from './checkout';
 
 class Cart extends Component {
 

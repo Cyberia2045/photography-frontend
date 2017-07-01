@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Cart from './cart';
 
 class GalleryStore extends Component {
 

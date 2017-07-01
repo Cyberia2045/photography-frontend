@@ -166,7 +166,14 @@
     position: absolute;
     width: 8vw;
     height: 3vw;
-    margin-top: 0.1%; } }
+    margin-top: 0.1%; }
+
+  .homeButton__checkout {
+    position: absolute;
+    width: 8vw;
+    height: 3vw;
+    margin-top: 0.1%;
+    left: -35%; } }
 @media (min-width: 700px) {
   .galleryStore {
     width: 70vw;
@@ -210,7 +217,12 @@
 
   .homeButton {
     height: 1.6vw;
-    padding: 1.6%; } }
+    padding: 1.6%; }
+
+  .homeButton__checkout {
+    height: 1.5vw;
+    padding-top: 0.5%;
+    top: 0.5%; } }
 @media (min-width: 700px) and (min-width: 980px) {
   .poster-image {
     width: 80%;
@@ -282,6 +294,11 @@
   .homeButton {
     width: 8%;
     height: 1vw;
-    padding: 1%; } }
+    padding: 1%; }
+
+  .homeButton__checkout {
+    width: 5%;
+    height: 1vw;
+    padding-top: 0.8%; } }
 
 /*# sourceMappingURL=galleryStore.css.map */

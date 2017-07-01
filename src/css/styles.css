@@ -77,14 +77,16 @@ html, body {
 .nextArrow {
   position: absolute;
   top: 50%;
-  right: 5%;
+  right: 2%;
   cursor: pointer;
   transition: all ease-in .2s;
   color: #fff;
   width: 50px;
   height: 50px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/8d/Right_curve_arrow_double_back_-_black.svg");
-  background-size: 100% 100%; }
+  background-image: url("http://cdn.onlinewebfonts.com/svg/img_83190.svg");
+  background-size: 100% 100%;
+  background-color: rgba(120, 120, 120, 0.7);
+  border-radius: 10px; }
   .nextArrow:hover {
     opacity: 0.5;
     transform: scale(1.4);
@@ -93,12 +95,14 @@ html, body {
 .backArrow {
   position: absolute;
   top: 50%;
-  left: 5%;
+  left: 2%;
   cursor: pointer;
   color: #fff;
+  background-color: rgba(120, 120, 120, 0.7);
+  border-radius: 10px;
   width: 50px;
   height: 50px;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/77/Left_curve_arrow_double_back_-_black.svg");
+  background-image: url("http://cdn.onlinewebfonts.com/svg/img_424491.svg");
   background-size: 100% 100%;
   transition: all ease-in .2s; }
   .backArrow:hover {
@@ -125,7 +129,7 @@ html, body {
   width: 25%;
   height: 4%;
   padding: 1%;
-  bottom: 1%;
+  bottom: 5%;
   left: 37.5%;
   border-radius: 10px;
   text-align: center;
@@ -133,11 +137,17 @@ html, body {
   color: #e6e6e6;
   background-color: rgba(120, 120, 120, 0.7); }
 
-@media (min-width: 1100px) {
+@media (min-width: 700px) {
+  .scrollText {
+    width: 12%;
+    left: 44%;
+    height: 3%; } }
+@media (min-width: 1000px) {
   .scrollText {
     width: 15%;
     left: 42.5%;
-    padding: 0.5%; } }
+    padding: 0.5%;
+    height: 2.5%; } }
 .shopping-cart {
   position: absolute;
   z-index: 10;
@@ -393,7 +403,14 @@ html, body {
     position: absolute;
     width: 8vw;
     height: 3vw;
-    margin-top: 0.1%; } }
+    margin-top: 0.1%; }
+
+  .homeButton__checkout {
+    position: absolute;
+    width: 8vw;
+    height: 3vw;
+    margin-top: 0.1%;
+    left: -35%; } }
 @media (min-width: 700px) {
   .galleryStore {
     width: 70vw;
@@ -437,7 +454,12 @@ html, body {
 
   .homeButton {
     height: 1.6vw;
-    padding: 1.6%; } }
+    padding: 1.6%; }
+
+  .homeButton__checkout {
+    height: 1.5vw;
+    padding-top: 0.5%;
+    top: 0.5%; } }
 @media (min-width: 700px) and (min-width: 980px) {
   .poster-image {
     width: 80%;
@@ -509,7 +531,12 @@ html, body {
   .homeButton {
     width: 8%;
     height: 1vw;
-    padding: 1%; } }
+    padding: 1%; }
+
+  .homeButton__checkout {
+    width: 5%;
+    height: 1vw;
+    padding-top: 0.8%; } }
 .carousel-title {
   position: absolute;
   z-index: 10;
