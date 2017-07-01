@@ -15,6 +15,7 @@ class Slider extends Component {
     this.nextSlide = this.nextSlide.bind(this);
     this.previousSlide = this.previousSlide.bind(this);
 
+    this.carouselSlider = setInterval(this.nextSlide, 7000)
   }
 
   render() {
@@ -52,12 +53,11 @@ class Slider extends Component {
     else {
       this.setState({ slideCount: this.state.slideCount - 1 })
     }
+  } 
+
+  componentWillUnmount() {
+    this.carouselSlider && clearInterval(this.carouselSlider);
   }
-
-    componentDidMount() { 
-      window.setInterval(this.nextSlide, 7000);
-    }  
-
 
 }
 

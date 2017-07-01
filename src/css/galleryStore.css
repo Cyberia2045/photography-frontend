@@ -95,6 +95,20 @@
   margin-bottom: 5px;
   margin-left: 1%; }
 
+.homeButton__checkout {
+  position: relative;
+  width: 12%;
+  height: 5vw;
+  color: white;
+  background-color: #323232;
+  border: 1px solid white;
+  padding: 1%;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 0.5%;
+  margin-bottom: 5px;
+  margin-left: 40%; }
+
 @media (min-width: 500px) {
   .galleryStore {
     width: 50vw; }

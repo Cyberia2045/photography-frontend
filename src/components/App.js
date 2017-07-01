@@ -93,8 +93,8 @@ class App extends Component {
     if (this.state.cartRendered) {
       renderedComponent = (
           <div>
+          <div onClick={this.renderHome} className="homeButton__checkout">Home</div>
             <Checkout photos={this.state.cartPhotos} />
-            <div onClick={this.renderHome} className="homeButton">Home</div>
           </div>
         )
     }
