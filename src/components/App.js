@@ -157,6 +157,7 @@ class App extends Component {
 
   updateCart(cartPhoto) {
     let updatedCart = this.state.cartPhotos
+    console.log(updatedCart)
     updatedCart.push(cartPhoto)
     this.setState({ cartPhotos: updatedCart})
   }

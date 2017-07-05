@@ -66,7 +66,11 @@ class GalleryStore extends Component {
 	}
 
 	addToCart() {
-		let cartPhoto = {photo: this.state.photo, price: this.state.price, imageClass: this.state.imageClass}
+		let cartPhoto = {
+			photo: this.state.photo, 
+			price: this.state.price, 
+			imageClass: this.state.imageClass
+		}
 		this.props.updateCart(cartPhoto)
 	}
 

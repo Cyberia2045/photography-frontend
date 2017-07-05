@@ -537,7 +537,10 @@ html, body {
     width: 5%;
     height: 1vw;
     padding-top: 0.8%; } }
-.carousel-title {
+.carousel {
+  position: relative; }
+
+.carousel__title {
   position: absolute;
   z-index: 10;
   width: 50%;
@@ -551,7 +554,7 @@ html, body {
   background-color: rgba(120, 120, 120, 0.7); }
 
 @media (min-width: 768px) {
-  .carousel-title {
+  .carousel__title {
     width: 40%;
     left: 30%;
     font-size: 2em; } }

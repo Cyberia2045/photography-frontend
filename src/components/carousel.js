@@ -10,9 +10,6 @@ class Carousel extends Component {
 			carouselTitle: props.carouselTitle,
 			carouselButtonTitle: props.carouselButtonTitle
 		}
-		this.carouselStyle = {
-			position: "relative"
-		}
 
 		this.handleLoadGallery = this.handleLoadGallery.bind(this)
 
@@ -28,8 +25,8 @@ class Carousel extends Component {
 			}
 
 			return(
-				<div style={this.carouselStyle}>
-					<div className="carousel-title">{this.state.carouselTitle}</div>
+				<div className="carousel">
+					<div className="carousel__title">{this.state.carouselTitle}</div>
 					<Slider photos={this.state.carouselSlider}/>
 					<div onClick={this.handleLoadGallery} className="carousel-button">{this.state.carouselButtonTitle}</div>
 					{scrollText}
@@ -43,7 +40,7 @@ class Carousel extends Component {
 		}
 
 		slideScroll() {
-			console.log("hello world")
+			window.scrollBy(0, 100);
 		}
 
 }
