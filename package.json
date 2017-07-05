@@ -2,6 +2,7 @@
   "name": "photography",
   "version": "0.1.0",
   "private": true,
+  "start": "node app.js",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
