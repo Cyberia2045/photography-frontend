@@ -40,7 +40,7 @@ class Carousel extends Component {
 		}
 
 		slideScroll() {
-			window.scrollBy(0, 100);
+			window.scrollBy(0, 690);
 		}
 
 }
