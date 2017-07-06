@@ -17,7 +17,10 @@
   border: 3px solid black;
   border-radius: 10px;
   margin: 0 auto;
-  margin-top: 20px; }
+  margin-top: 20px;
+  opacity: 0;
+  animation: fade 2s ease-in;
+  animation-fill-mode: forwards; }
 
 .homeButton {
   position: absolute;
@@ -68,5 +71,14 @@
 
   .homeButton {
     width: 8%; } }
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 0.2; }
+  60% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=gallery.css.map */
