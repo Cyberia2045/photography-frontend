@@ -24,10 +24,7 @@ class Slider extends Component {
       backgroundImage: "url(" + this.state.photos[this.state.slideCount] + ")",
       backgroundSize: "cover",
       backgroundRepeat: "no-repeat",
-      height: "100vh",
-      opacity: "0",
-      animation: "fade 5s ease-in",
-      animationFillMode: "forwards"
+      height: "100vh"
     }
 
     return (
