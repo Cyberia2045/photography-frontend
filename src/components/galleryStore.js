@@ -8,6 +8,7 @@ class GalleryStore extends Component {
 			photo: props.photo,
 			imageClass: "poster-image",
 			price: "55.00",
+			total: "0.00",
 			cartPhotos: []
 		}
 

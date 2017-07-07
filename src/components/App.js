@@ -84,6 +84,7 @@ class App extends Component {
     this.updateCart = this.updateCart.bind(this)
     this.renderHome = this.renderHome.bind(this)
     this.renderCart = this.renderCart.bind(this)
+    this.removeItem = this.removeItem.bind(this)
   }
 
   render() {
@@ -94,7 +95,7 @@ class App extends Component {
       renderedComponent = (
           <div>
           <div onClick={this.renderHome} className="homeButton__checkout">Home</div>
-            <Checkout photos={this.state.cartPhotos} />
+            <Checkout photos={this.state.cartPhotos} removeItem={this.removeItem} />
           </div>
         )
     }
@@ -157,7 +158,6 @@ class App extends Component {
 
   updateCart(cartPhoto) {
     let updatedCart = this.state.cartPhotos
-    console.log(updatedCart)
     updatedCart.push(cartPhoto)
     this.setState({ cartPhotos: updatedCart})
   }
@@ -169,6 +169,12 @@ class App extends Component {
 
   renderCart() {
     this.setState({ cartRendered: true })
+  }
+
+  removeItem(photoIndex) {
+    let updatedCart = this.state.cartPhotos
+    updatedCart.splice(photoIndex, 1)
+    this.setState({ cartPhotos: updatedCart })
   }
 
 }

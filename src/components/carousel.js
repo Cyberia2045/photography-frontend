@@ -40,7 +40,21 @@ class Carousel extends Component {
 		}
 
 		slideScroll() {
-			window.scrollBy(0, 690);
+			var height = window.innerHeight;
+	
+			var position = 0;
+			var increment = height / 20
+
+
+			var myInterval = setInterval(function() {
+				console.log("hello")
+				window.scrollBy(0, increment);
+				position++
+				if (position === 20) {
+					window.scrollBy(0, 6)
+					clearInterval(myInterval)
+				}
+			}, 20)
 		}
 
 }
