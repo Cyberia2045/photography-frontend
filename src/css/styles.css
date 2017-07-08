@@ -293,7 +293,10 @@ html, body {
     width: 20%; }
 
   .checkout__total-container {
-    height: 12vw; } }
+    height: 12vw; }
+
+  .removeItem {
+    width: 15%; } }
 .galleryStore {
   width: 80vw;
   margin: 0 auto; }
