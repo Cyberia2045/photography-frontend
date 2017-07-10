@@ -119,7 +119,7 @@ class App extends Component {
       renderedComponent = (
 
         <span>
-          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Photography By Michael Nagy" scrollText="Explore" />   
+          <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Photography By Michael Nagy" />   
         
           <Carousel carouselSlider= {this.explorerCarousel} carouselTitle="Exploring the World Through Light and Glass" carouselButtonTitle="Explore" loadGallery={this.loadGallery} gallery="Exploring the World Through Light and Glass" /> 
 

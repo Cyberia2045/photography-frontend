@@ -122,6 +122,40 @@ html, body {
     transform: scale(1.4);
     transition: all ease-in .2s; }
 
+.downArrow {
+  position: absolute;
+  top: 91%;
+  right: 40%;
+  cursor: pointer;
+  transition: all ease-in .2s;
+  color: #fff;
+  width: 20vw;
+  height: 10vw;
+  background-image: url("http://www.lowcountryren.com/nestor/Documentation/ionicons-1.4.1/png/512/arrow-down-b.png");
+  background-size: 100% 100%;
+  background-color: rgba(120, 120, 120, 0.7);
+  border-radius: 10px; }
+  .downArrow:hover {
+    opacity: 0.5;
+    transform: scale(1.4);
+    transition: all ease-in .2s; }
+
+@media (min-width: 500px) {
+  .downArrow {
+    top: 90.7%;
+    right: 44vw;
+    width: 12vw;
+    height: 5vw; } }
+@media (min-width: 1000px) {
+  .downArrow {
+    right: 45.5vw;
+    width: 9vw;
+    height: 4.5vw; } }
+@media (min-width: 1050px) {
+  .downArrow {
+    right: 46.5vw;
+    width: 7vw;
+    height: 3.5vw; } }
 .carousel-button {
   position: absolute;
   width: 25%;
@@ -135,31 +169,10 @@ html, body {
   color: #e6e6e6;
   background-color: rgba(120, 120, 120, 0.7); }
 
-.scrollText {
-  position: absolute;
-  z-index: 10;
-  width: 25%;
-  height: 4%;
-  padding: 1%;
-  bottom: 5%;
-  left: 37.5%;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 1.1em;
-  color: #e6e6e6;
-  background-color: rgba(120, 120, 120, 0.7); }
-
-@media (min-width: 700px) {
-  .scrollText {
-    width: 12%;
-    left: 44%;
-    height: 3%; } }
-@media (min-width: 1000px) {
-  .scrollText {
-    width: 15%;
-    left: 42.5%;
-    padding: 0.5%;
-    height: 2.5%; } }
+@media (min-width: 1100px) {
+  .carousel-button {
+    width: 15vw;
+    left: 42.5vw; } }
 .shopping-cart {
   position: absolute;
   z-index: 10;

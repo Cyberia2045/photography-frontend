@@ -42,3 +42,57 @@
       transition: all ease-in .2s;
     }
   }
+
+  .downArrow {
+    position: absolute;
+    top: 91%;
+    right: 40%;
+    cursor: pointer;
+    transition: all ease-in .2s;
+    color: #fff;
+    width: 20vw;
+    height: 10vw;
+    background-image: url("http://www.lowcountryren.com/nestor/Documentation/ionicons-1.4.1/png/512/arrow-down-b.png");
+    background-size: 100% 100%;
+    background-color: rgba(120, 120, 120, 0.7);
+    border-radius: 10px;
+
+  &:hover {
+      opacity: 0.5;
+      transform: scale(1.4);
+      transition: all ease-in .2s;
+    }
+  }
+
+  @media (min-width: 500px) {
+
+    .downArrow {
+      top: 90.7%;
+      right: 44vw;
+      width: 12vw;
+      height: 5vw;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .downArrow {
+      right: 45.5vw;
+      width: 9vw;
+      height: 4.5vw;
+    }
+  }
+
+  @media (min-width: 1050px) {
+    .downArrow {
+      right: 46.5vw;
+      width: 7vw;
+      height: 3.5vw;
+    }
+  }
+
+
+
+
+
+
+

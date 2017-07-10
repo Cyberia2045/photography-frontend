@@ -12,38 +12,12 @@
 	background-color: rgba(120, 120, 120, 0.7);
 }
 
-.scrollText {
-	position: absolute;
-	z-index: 10;
-	width: 25%;
-	height: 4%;
-	padding: 1%;
-	bottom: 5%;
-	left: 37.5%;
-	border-radius: 10px;
-	text-align: center;
-	font-size: 1.1em;
-	color: rgb(230, 230, 230);
-	background-color: rgba(120, 120, 120, 0.7);
-}
-
-@media (min-width: 700px) {
-	.scrollText {
-		width: 12%;
-		left: 44%;
-		height: 3%;
+@media (min-width: 1100px) {
+	.carousel-button {
+		width: 15vw;
+		left: 42.5vw;
 	}
 }
-
-@media (min-width: 1000px) {
-	.scrollText {
-		width: 15%;
-		left: 42.5%;
-		padding: 0.5%;
-		height: 2.5%;
-	}
-}
-
 
 
 

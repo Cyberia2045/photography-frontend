@@ -20,7 +20,9 @@ class Carousel extends Component {
 			let scrollText;
 			if (this.props.scrollText) {
 				scrollText = <div onClick={this.slideScroll} className="scrollText">{this.props.scrollText}</div>
-			} else {
+			} 
+
+			else {
 				scrollText = <span></span>
 			}
 
@@ -37,24 +39,6 @@ class Carousel extends Component {
 
 		handleLoadGallery() {
 			this.props.loadGallery(this.props.gallery)
-		}
-
-		slideScroll() {
-			var height = window.innerHeight;
-	
-			var position = 0;
-			var increment = height / 20
-
-
-			var myInterval = setInterval(function() {
-				console.log("hello")
-				window.scrollBy(0, increment);
-				position++
-				if (position === 20) {
-					window.scrollBy(0, 6)
-					clearInterval(myInterval)
-				}
-			}, 20)
 		}
 
 }

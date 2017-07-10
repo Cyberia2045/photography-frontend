@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RightArrow from './RightArrow';
 import LeftArrow from './LeftArrow';
+import SlideScroller from './slideScroller';
 
 class Slider extends Component {
   
@@ -32,6 +33,7 @@ class Slider extends Component {
 
           <RightArrow nextSlide={this.nextSlide} />
           <LeftArrow previousSlide={this.previousSlide} />
+          <SlideScroller slideScroll={this.slideScroll} />
           
         </div>
     );
@@ -57,6 +59,23 @@ class Slider extends Component {
 
   componentWillUnmount() {
     this.carouselSlider && clearInterval(this.carouselSlider);
+  }
+
+  slideScroll() {
+    var height = window.innerHeight;
+
+    var position = 0;
+    var increment = height / 20
+
+
+    var myInterval = setInterval(function() {
+      window.scrollBy(0, increment);
+      position++
+      if (position === 20) {
+        window.scrollBy(0, 6)
+        clearInterval(myInterval)
+      }
+    }, 20)
   }
 
 }
